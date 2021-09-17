@@ -16,7 +16,9 @@ namespace HomeWork7
                 Console.WriteLine("1. Добавить запись");
                 Console.WriteLine("2. Удалить запись");
                 Console.WriteLine("3. Редактировать запись");
-                Console.WriteLine("4. ");
+                Console.WriteLine("4. Сортировать");
+                Console.WriteLine("5. Вывести список всех записей");
+                Console.WriteLine("6. Вывести список записей по диапазону дат");
                 Console.WriteLine();
                 Console.Write("Выберите номер действия: "); measurement = int.Parse(Console.ReadLine());
                 switch (measurement)
@@ -31,9 +33,19 @@ namespace HomeWork7
                         break;
                     case 3:
                         Console.Clear();
+                        Diary.Edit();
                         break;
                     case 4:
                         Console.Clear();
+                        Diary.Sort();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Diary.Print();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Diary.ListByDate();
                         break;
                     default:
                         f = false;
